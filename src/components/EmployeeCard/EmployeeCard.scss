@@ -1,9 +1,22 @@
 .name{
-    font-size: 25px;
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
 
 }
 
 .role{
-    font-size: 20px;
+    font-size: 15px;
+    margin-top: 10px;
+color: #000;
+
 }
 
+.tag{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background:#ffc;
+}
