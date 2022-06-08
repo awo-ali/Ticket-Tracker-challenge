@@ -1,15 +1,30 @@
-import React from 'react'
+import React, {useState} from 'react'
 import "./Counter.scss"
 
 
 const Counter = (props) => {
-  const { title, buttonText, textButton } = props;
+  const { title} = props;
+  const [counter, setCounter] = useState(0)
+
+ 
+  const handleIncrement = () => {
+     setCounter(counter + 1)
+  }
+  const handleDecrement = () => {
+    if(counter === 0){
+      return
+  }else{
+   setCounter(counter - 1)
+  }
+     
+  }
+
   return (
-    <div>
+    <div  className='counterCard' >
         <h4>{title}</h4>
-        <div></div>
-        <button>{buttonText}</button>
-        <button>{textButton}</button>
+        <p>{counter}</p>
+        <button onClick={handleDecrement}>-</button>
+        <button onClick={handleIncrement}>+</button>
     </div>
   )
 }

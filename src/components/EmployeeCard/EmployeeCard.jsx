@@ -4,9 +4,9 @@ import "./EmployeeCard.scss"
 const EmployeeCard = (props) => {
   const {nameTag, roleTag} = props;
   return (
-    <div>
-      <h2>{nameTag}</h2>
-      <h3>{roleTag}</h3>
+    <div className='tag'>
+      <h2 className='name'>{nameTag}</h2>
+      <h3 className='role'>{roleTag}</h3>
     </div>
   )
 }

@@ -1,0 +1,27 @@
+.app {
+    margin: 30px;
+    padding: 30px;
+    border: 2px solid black;
+    height: 100vh;
+  
+
+}
+.title {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    width: 300px;
+    height: 350px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+   
+}
+.cardContainer{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content:  space-evenly;
+  
+
+
+}
