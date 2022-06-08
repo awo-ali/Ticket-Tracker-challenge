@@ -2,8 +2,8 @@ import React, {useState} from 'react'
 import "./Counter.scss"
 
 
-const Counter = (props) => {
-  const { title} = props;
+const Counter = () => {
+  
   const [counter, setCounter] = useState(0)
 
  
@@ -21,10 +21,12 @@ const Counter = (props) => {
 
   return (
     <div  className='counterCard' >
-        <h4>{title}</h4>
+        <h4>Ticket</h4>
+        <div className='counterButtons'>
+        <button className='minusTicket' onClick={handleDecrement}>-</button>
         <p>{counter}</p>
-        <button onClick={handleDecrement}>-</button>
-        <button onClick={handleIncrement}>+</button>
+        <button className='addTicket' onClick={handleIncrement}>+</button>
+        </div>
     </div>
   )
 }
