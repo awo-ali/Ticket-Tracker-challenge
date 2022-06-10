@@ -1,31 +1,52 @@
+import "./App.scss";
+import React, {useState, useEffect} from 'react'
+import EmployeeCard from "./components/EmployeeCard/EmployeeCard";
+import Counter from "./components/Counter/Counter";
+import team from "./data/team";
+import Form from "./components/Form/Form";
 
-import './App.scss';
-import EmployeeCard from './components/EmployeeCard/EmployeeCard'
-import Counter from './components/Counter/Counter'
-import team from './data/team'
+const App = (props) => {
 
+  const [ showForm, setShowForm] = useState(false)
+  const [ teamMembers, setTeamMembers] = useState(team)
+  
 
-const App = () => {
+  const toggleForm =() => {
+ setShowForm(!showForm)
+  };
+  
 
-const cardArr = team.map ((team)  => 
-<div  className='card'>
-<EmployeeCard nameTag = {team.name} roleTag = {team.role}/>
-<Counter title = "Counter"/>
-</div>
-)
+  const addNewMember = (memberName, memberRole, event) =>{
+    event.preventDefault()
+    setTeamMembers([...teamMembers,{name:memberName, role:memberRole, id:team.length+1}])
+    console.log(team);
+  }
+  console.log(teamMembers);
 
-  //console.log(team.name);
-  return (
+ 
 
-
-    <div className='app'>
-    <h1 className='title'>Ticket Tracker</h1>
-    <div className='cardContainer'>
-    {cardArr}
+  const cardArr = (team) => {  return team.map((team) => (
+    <div className="card">
+      <EmployeeCard nameTag={team.name} roleTag={team.role} />
+      <Counter title="Counter" />
+      
     </div>
-    </div>
-  )
+  ));
 }
+   
+ 
 
-export default App
+ 
+  return (
+    <div className="app">
+      {showForm &&  <Form newMember={addNewMember} toggleForm={toggleForm}/> }
+      <button onClick={toggleForm} toggleForm={toggleForm}>Click For New Employee</button>
+      <h1 className="title">Ticket Tracker</h1>
+      <div className="cardContainer">{cardArr(teamMembers)}</div>
+     
+ 
+    </div>
+  );
+};
 
+export default App;
