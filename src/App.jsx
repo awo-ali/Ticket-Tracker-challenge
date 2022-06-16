@@ -1,7 +1,7 @@
 import "./App.scss";
 import React, {useState, useEffect} from 'react'
-import EmployeeCard from "./components/EmployeeCard/EmployeeCard";
-import Counter from "./components/Counter/Counter";
+import EmployeeCard from "./container/EmployeeCard/EmployeeCard";
+import Counter from "./container/Counter/Counter";
 import team from "./data/team";
 import Form from "./components/Form/Form";
 
@@ -35,12 +35,10 @@ const App = (props) => {
 }
    
  
-
- 
   return (
     <div className="app">
       {showForm &&  <Form newMember={addNewMember} toggleForm={toggleForm}/> }
-      <button onClick={toggleForm} toggleForm={toggleForm}>Click For New Employee</button>
+      <button data-testid='button' onClick={toggleForm} toggleForm={toggleForm}>Click For New Employee</button>
       <h1 className="title">Ticket Tracker</h1>
       <div className="cardContainer">{cardArr(teamMembers)}</div>
      
