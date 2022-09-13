@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ticket-tracker-challenge/static/css/main.e1edf127.css",
+    "main.js": "/ticket-tracker-challenge/static/js/main.06180de7.js",
+    "static/js/787.0503ef8c.chunk.js": "/ticket-tracker-challenge/static/js/787.0503ef8c.chunk.js",
+    "index.html": "/ticket-tracker-challenge/index.html",
+    "main.e1edf127.css.map": "/ticket-tracker-challenge/static/css/main.e1edf127.css.map",
+    "main.06180de7.js.map": "/ticket-tracker-challenge/static/js/main.06180de7.js.map",
+    "787.0503ef8c.chunk.js.map": "/ticket-tracker-challenge/static/js/787.0503ef8c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e1edf127.css",
+    "static/js/main.06180de7.js"
+  ]
+}
