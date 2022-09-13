@@ -5,7 +5,7 @@ import Counter from "./container/Counter/Counter";
 import team from "./data/team";
 import Form from "./components/Form/Form";
 
-const App = (props) => {
+const App = () => {
 
   const [ showForm, setShowForm] = useState(false)
   const [ teamMembers, setTeamMembers] = useState(team)
@@ -23,15 +23,18 @@ const App = (props) => {
   }
   console.log(teamMembers);
 
- 
+  console.log(teamMembers[1].name);
+  console.log(team[1].name);
 
   const cardArr = (team) => {  return team.map((team) => (
     <div className="card">
       <EmployeeCard nameTag={team.name} roleTag={team.role} />
       <Counter title="Counter" />
-      
     </div>
+
   ));
+
+ 
 }
    
  

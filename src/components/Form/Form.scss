@@ -1,0 +1,23 @@
+
+.form{
+ border: 2px solid black;
+ width: 50%;
+ height: auto;
+
+
+
+
+&:hover {
+    cursor: pointer;
+  }
+  &__cross {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+#submitButton{
+    background-color:rgb(223, 196, 196);
+    font-weight: bold;
+}
+}
