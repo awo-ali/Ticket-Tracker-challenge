@@ -1,5 +1,5 @@
 {
-  "name": "ticket-tracker",
+  "name": "ticket-tracker-challenge",
   "version": "0.1.0",
   "private": true,
   "homepage": "http://awo-ali.github.io/ticket-tracker-challenge",
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-   "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,9 +40,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "sass": "^1.36.0"
   }
-
-    
-  
 }
